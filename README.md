@@ -10,6 +10,9 @@
 # 安装
 npm install react-native-sf-progress
 
+# IOS
+Add the ART.xcodeproj (found in node_modules/react-native/Libraries/ART) to the Libraries group and add libART.a to Link Binary With Libraries under Build Phases.
+
 # Props (公共)
 |  parameter  |  type  |  required  |   description  |  default  |
 |:-----|:-----|:-----|:-----|:-----|
