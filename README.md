@@ -20,7 +20,6 @@ npm install react-native-sf-progress
 |edgeInside|number|no|进度条边距|0|
 |borderWidth|number|no|进度条边框宽度|0|
 |borderColor|string|no|进度条边框颜色|'rgba(233,233,233,1)'|
-|textComponent|bool、func|no|是否显示进度文本（或者写入组件自定义）|true|
 |textColor|string|no|进度文字颜色|'black'|
 |textFontSize|number|no|进度文字大小|null|
 |textFontWeight|string|no|进度文字厚度|'bold'|
@@ -33,6 +32,7 @@ npm install react-native-sf-progress
 |height|number|yes|进度条高度|null|
 |textWidth|number|no|进度文字宽度|50|
 |textLightColor|string|no|进度文字在左边时的颜色|0|
+|textComponent|bool、func|no|是否显示进度文本（或者写入组件自定义）|true,func(progress,direction,tag)|
 
 
 # Props (SFProgressCircle)
@@ -40,6 +40,7 @@ npm install react-native-sf-progress
 |:-----|:-----|:-----|:-----|:-----|
 |radius|number|yes|进度条半径|null|
 |thickness|number|no|进度条宽度|1|
+|textComponent|bool、func|no|是否显示进度文本（或者写入组件自定义）|true,,func(progress,tag|
 
 
 # Methods（公共）

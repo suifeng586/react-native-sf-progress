@@ -17,6 +17,7 @@ var {
 } = ART;
 export default class SFProgressBar extends Component {
     static propTypes = {
+        tag: PropTypes.number,
         width: PropTypes.number.isRequired,
         height: PropTypes.number.isRequired,
         containerStyle: PropTypes.object,
@@ -38,6 +39,7 @@ export default class SFProgressBar extends Component {
         textFontWeight: PropTypes.string
     }
     static defaultProps={
+        tag:0,
         trackTintColor:'white',
         progressTintColor:'rgba(64,169,255,1)',
         progress:0,
@@ -107,7 +109,7 @@ export default class SFProgressBar extends Component {
                 )
             }
         }else {
-            return this.props.textComponent(this.progress,direction);
+            return this.props.textComponent(this.progress,direction,this.props.tag);
         }
         return null;
     }

@@ -17,6 +17,7 @@ var {
 const CIRCLE = Math.PI * 2;
 export default class SFProgressCircle extends Component {
     static propTypes = {
+        tag: PropTypes.number,
         radius: PropTypes.number.isRequired,
         thickness: PropTypes.number,
         containerStyle: PropTypes.object,
@@ -36,6 +37,7 @@ export default class SFProgressCircle extends Component {
         textFontWeight: PropTypes.string
     }
     static defaultProps={
+        tag:0,
         thickness:1,
         trackTintColor:'white',
         progressTintColor:'rgba(64,169,255,1)',
@@ -98,7 +100,7 @@ export default class SFProgressCircle extends Component {
                 )
             }
         }else {
-            return this.props.textComponent(this.progress);
+            return this.props.textComponent(this.progress,this.props.tag);
         }
         return null;
     }
